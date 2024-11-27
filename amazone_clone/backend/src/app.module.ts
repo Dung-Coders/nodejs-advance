@@ -10,7 +10,7 @@ import { ProductModule } from './product/product.module';
   imports: [
     PrismaModule,
     ConfigModule.forRoot({isGlobal:true}),
-    ProductModule
+    ProductModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],

@@ -7,11 +7,17 @@ import { UpdateProductDto } from './dto/update-product.dto';
 export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
-
+  //build search func
   @Get("/search")
   searchProduct(@Query("name") name){
     return this.productService.searchProduct(name);
   }
+  //build ordered func
+  @Post("/order")
+  orders(@Body() order){
+    return this.productService.orders(order);
+  }
+
   //crud
   @Post()
   create(@Body() createProductDto: CreateProductDto) {
