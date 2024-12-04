@@ -23,3 +23,9 @@ bootstrap();
 //yarn prisma generate
 
 //yarn add @nestjs/config  (for prisma read .env)
+// Setup cache
+// yarn add @nestjs/cache-manager cache-manager@5.7.6
+// Setup Redis
+// docker run --name some-redis -d -p 6379:6379 redis redis-server --requirepass 1234
+// To connect Cache to Redis
+// yarn add redis cache-manager-redis-store@2.0.0
